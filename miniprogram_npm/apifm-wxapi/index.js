@@ -108,9 +108,11 @@ var request = function request(url, needSubDomain, method, data) {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       success: function success(request) {
+        console.log("index:request=>success", request.data)
         resolve(request.data);
       },
       fail: function fail(error) {
+        console.log("index:request=>success", error)
         reject(error);
       },
       complete: function complete(aaa) {
